@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/01a5ae2eba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="main.js"></script>
+    <title>Responsive Web</title>
+  </head>
+
+  <body>
+    <!-- Nav -->
+    <nav id="navbar">
+      <div class="navbar__container">
+        <a href="index.html"
+          ><img src="img/mashuptemplate.png" alt="main-logo"
+        /></a>
+        <button class="navbar__toggle--btn" href="#">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item"><a href="index.html">Home</a></li>
+        <li class="navbar__menu__item"><a href="about.html">About</a></li>
+        <li class="navbar__menu__item"><a href="pricing.html">Pricing</a></li>
+        <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
+        <li class="navbar__menu__item">
+          <a href="components.html">Components</a>
+        </li>
+        <li class="navbar__menu__item">
+          <a class="" href="download.html">Download</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Contact -->
+    <section id="contact-contents" class="section">
+      <div class="container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.413620027282!2d127.09591411453687!3d36.99992767990786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2322707931cba64!2z7ZWc7ISx67mE7KCE7JWE7YyM7Yq4!5e0!3m2!1sko!2skr!4v1586845558718!5m2!1sko!2skr"
+          width="100%"
+          height="450"
+          frameborder="0"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+        <div class="contact__container">
+          <ul class="contact__left">
+            <li class="contact__left--item">
+              <input type="text" placeholder="Full name" />
+            </li>
+            <li class="contact__left--item">
+              <input type="text" placeholder="Email" />
+            </li>
+            <li class="contact__left--item">
+              <input type="text" placeholder="Subject" />
+            </li>
+            <li class="contact__left--item">
+              <textarea rows="3" placeholder="Enter your message"></textarea>
+            </li>
+            <li class="contact__left--item">
+              <a href="#" class="download-btn">Send</a>
+            </li>
+          </ul>
+          <div class="contact__right">
+            <h3 class="contact__right--title">Head Office</h3>
+            <p class="contact__right--description">
+              42 rue Rouelle <br />75015 Paris FRANCE
+            </p>
+            <p class="contact__right--description">
+              contact@mybusiness.com<br />
+              +331 45 31 64 32
+            </p>
+            <h3 class="contact__right--title">Employment</h3>
+            <p class="contact__right--description">
+              To apply for a job with our team, please feel free to send us
+              your<br />
+              Linkedin profile link ou CV to : employment@mybusiness.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer" class="section">
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <h5 class="footer__item--title">About us</h5>
+            <p class="footer__item--description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
+              amet consectetur dolor
+            </p>
+          </li>
+          <li class="footer__item">
+            <h5 class="footer__item--title">Do you like ? Share this !</h5>
+            <ul class="footer__item--links">
+              <li class="link">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </li>
+              <li class="link">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </li>
+              <li class="link">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </li>
+            </ul>
+            <p>© Untitled | Website created with Mashup Template/Unsplash</p>
+          </li>
+          <li class="footer__item">
+            <h5 class="footer__item--title">Subscribe to newsletter</h5>
+            <div class="footer__submit">
+              <input type="text" />
+              <a class="download-btn" href="#">OK</a>
+            </div>
+          </li>
+        </ul>
+        <button class="arrowup--btn">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
