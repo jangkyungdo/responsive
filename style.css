@@ -184,19 +184,22 @@ button {
 }
 
 /* Contents */
+.slide__container {
+  height: 100vh;
+}
 .slide__box {
   width: 100%;
+  height: 100%;
   margin: auto;
   position: relative;
   overflow: hidden;
 }
 
 .slide__list {
-  /* display: flex;
-  text-align: center; */
   position: absolute;
   left: 0;
   width: 100%;
+  height: 100%;
   transition: all 300ms ease-in-out;
 }
 
@@ -729,6 +732,11 @@ select {
   pointer-events: auto;
 }
 
+@media screen and (max-width: 368px) {
+  .slide__container {
+    height: 33vh;
+  }
+}
 @media screen and (max-width: 768px) {
   /* Nav */
   #navbar {
@@ -764,6 +772,9 @@ select {
     display: block;
   }
 
+  .slide__container {
+    height: 50vh;
+  }
   /* index.html */
   .home__paragraph {
     width: 100%;

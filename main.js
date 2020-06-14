@@ -1,10 +1,10 @@
 "use strict";
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
-const slideContainer = document.querySelector(".slide__box");
+const slidebox = document.querySelector(".slide__box");
 const slideList = document.querySelector(".slide__list");
 const slideItem = document.querySelectorAll(".slide__item");
-const test = document.querySelector(".test");
+const slideContainer = document.querySelector(".slide__container");
 
 let slideHeight = 0;
 let current = 0;
@@ -40,26 +40,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 슬라이드  코드
-  if (slideContainer) {
+  if (slidebox) {
     // slide가 있을때 동작
     for (let i = 0; i < slideItem.length; i++) {
       if (slideHeight < slideItem[i].offsetHeight) {
         slideHeight = slideItem[i].offsetHeight;
       }
     }
-    test.style.height = slideHeight + "px";
-    slideContainer.style.height = slideHeight + "px";
-    slideList.style.height = slideHeight + "px";
+
+    // slideContainer.style.height = slideHeight + "px";
+    // slidebox.style.height = slideHeight + "px";
+    // slideList.style.height = slideHeight + "px";
 
     // slideItem(li) left값을 준다. li가로정렬
-    for (let i = 0; i < slideItem.length; i++) {
-      slideItem[i].style.left = `${100 * i}%`;
-    }
+    // for (let i = 0; i < slideItem.length; i++) {
+    //   slideItem[i].style.left = `${100 * i}%`;
+    // }
+    slideItem.forEach((item, index) => {
+      item.style.left = `${100 * index}%`;
+    });
 
     next.addEventListener("click", () => {
-      if (current === slideItem.length - 1) {
-        slideList.style.transition = `0s`;
-        goToSlide(0);
+      if (current === slideItem.length - 2) {
+        goToSlide(current + 1);
+        slideList.style.transition = `300ms`;
+        setTimeout(() => {
+          slideList.style.transition = `0s`;
+          goToSlide(1);
+        }, 300);
       } else {
         slideList.style.transition = `300ms`;
         goToSlide(current + 1);
@@ -67,9 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     prev.addEventListener("click", () => {
-      if (current === 0) {
-        slideList.style.transition = `0s`;
-        goToSlide(4);
+      if (current === 1) {
+        slideList.style.transition = `300ms`;
+        // goToSlide(0);
+        goToSlide(0);
+        setTimeout(() => {
+          slideList.style.transition = `0s`;
+          goToSlide(3);
+        }, 300);
       } else {
         slideList.style.transition = `300ms`;
         goToSlide(current - 1);
