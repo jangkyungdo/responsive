@@ -187,6 +187,7 @@ button {
 .slide__container {
   height: 100vh;
 }
+
 .slide__box {
   width: 100%;
   height: 100%;
@@ -206,10 +207,11 @@ button {
 .slide__item {
   width: 100%;
   position: absolute;
+  text-align: center;
 }
 
 .slide__item img {
-  width: 100%;
+  width: 80%;
 }
 
 .click {
@@ -732,12 +734,12 @@ select {
   pointer-events: auto;
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 375px) {
   .slide__container {
-    height: 33vh;
+    height: 25vh;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   /* Nav */
   #navbar {
     align-items: flex-start;
