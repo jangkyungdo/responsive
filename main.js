@@ -61,12 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     next.addEventListener("click", () => {
-      if (current === slideItem.length - 2) {
-        goToSlide(current + 1);
+      if (current === slideItem.length - 3) {
+        goToSlide(3);
         slideList.style.transition = `300ms`;
         setTimeout(() => {
           slideList.style.transition = `0s`;
-          goToSlide(1);
+          goToSlide(0);
         }, 300);
       } else {
         slideList.style.transition = `300ms`;
@@ -75,13 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     prev.addEventListener("click", () => {
-      if (current === 1) {
+      if (current === 0) {
+        goToSlide(-1);
         slideList.style.transition = `300ms`;
-        // goToSlide(0);
-        goToSlide(0);
         setTimeout(() => {
           slideList.style.transition = `0s`;
-          goToSlide(3);
+          goToSlide(2);
         }, 300);
       } else {
         slideList.style.transition = `300ms`;

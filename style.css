@@ -201,6 +201,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  transform: translateX(-100%);
   transition: all 300ms ease-in-out;
 }
 
@@ -734,12 +735,7 @@ select {
   pointer-events: auto;
 }
 
-@media screen and (max-width: 375px) {
-  .slide__container {
-    height: 25vh;
-  }
-}
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Nav */
   #navbar {
     align-items: flex-start;
@@ -891,5 +887,11 @@ select {
 
   .footer__item {
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slide__container {
+    height: 25vh;
   }
 }
