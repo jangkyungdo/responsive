@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/01a5ae2eba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="../img/favicon2.png" />
+    <script defer src="../main.js"></script>
+    <title>Responsive Web</title>
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav id="navbar">
+      <div class="navbar__container">
+        <a href="../index.html"
+          ><img src="../img/mashuptemplate.png" alt="main-logo"
+        /></a>
+        <button class="navbar__toggle--btn" href="#">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item"><a href="../index.html">Home</a></li>
+        <li class="navbar__menu__item">
+          <a href="about.html">About</a>
+        </li>
+        <li class="navbar__menu__item">
+          <a href="pricing.html">Pricing</a>
+        </li>
+        <li class="navbar__menu__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li class="navbar__menu__item">
+          <a href="components.html">Components</a>
+        </li>
+        <li class="navbar__menu__item">
+          <a href="download.html">Download</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Components -->
+    <section id="components-contents" class="section">
+      <div class="container contents-container">
+        <div class="content__left">
+          <h2 class="content__left--title">Text</h2>
+          <p class="content__left--description">
+            This is bold and this is semi bold and
+            <strong>this is extra</strong> bold. This is italic and this is
+            extra light and this is light and this is regular. Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. <span>Duis aute irure dolor</span> in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p class="content__left--description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            posuere erat a ante.
+          </p>
+          <h2 class="content__left--title">Headings</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <h1>H1 : Heading 1</h1>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>H2 : Heading 2</h2>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>H3 : Heading 3</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>H4 : Heading 4</h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="content__left--title">List</h2>
+          <div class="list__container">
+            <div class="list">
+              <h3>Ordered</h3>
+              <ul class="ordered-list">
+                <li class="list__item">Consectetur adipiscing elit</li>
+                <li class="list__item">Integer molestie lorem at massa</li>
+                <li class="list__item">Facilisis in pretium nisl aliquet</li>
+                <li class="list__item">Nulla volutpat aliquam velit</li>
+              </ul>
+            </div>
+            <div class="list">
+              <h3>Number</h3>
+              <ol>
+                <li class="list__item">Consectetur adipiscing elit</li>
+                <li class="list__item">Integer molestie lorem at massa</li>
+                <li class="list__item">Facilisis in pretium nisl aliquet</li>
+                <li class="list__item">Nulla volutpat aliquam velit</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__right">
+          <h2 class="content__right--title">Icons</h2>
+          <div class="right__icons">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </div>
+          <div class="right__buttons">
+            <h2 class="content__right--title">Buttons</h2>
+            <div class="buttons">
+              <div class="button__container">
+                <div class="button">
+                  <h3 class="button__title">Primary</h3>
+                  <button class="primary-btn btn">Primary Large</button>
+                  <button class="primary-btn btn">Primary</button>
+                  <button class="primary-btn btn">Primary Small</button>
+                </div>
+                <div class="button">
+                  <h3 class="button__title">Secondary</h3>
+                  <button class="secondary-btn btn">
+                    Secondary Large
+                  </button>
+                  <button class="secondary-btn btn">
+                    Secondary
+                  </button>
+                  <button class="secondary-btn btn">
+                    Secondary Small
+                  </button>
+                </div>
+              </div>
+              <div class="button">
+                <h3 class="button__title">Default</h3>
+                <button class="default-btn btn">
+                  Default Large
+                </button>
+                <button class="default-btn btn">
+                  Default
+                </button>
+                <button class="default-btn btn">
+                  Default Small
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="inputs">
+            <h3>Inputs</h3>
+            <input type="text" placeholder="Email" />
+            <select name="number" aria-placeholder="1">
+              <option value="1"> 1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <div>
+              <label class="checkbox" for="checkbox-first">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="checkbox-first"
+                />Email me a copy
+              </label>
+              <label class="checkbox" for="checkbox-second">
+                <input class="checkbox" type="checkbox" id="checkbox-second" />I
+                am a human
+              </label>
+            </div>
+
+            <textarea
+              class="message"
+              placeholder="Enter Your message"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+            <div>
+              <p class="message-first">Your message was successfully sent</p>
+              <p class="message-second">
+                Your message has not been sent, restart
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section">
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <h5 class="footer__item--title">About us</h5>
+            <p class="footer__item--description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
+              amet consectetur dolor
+            </p>
+          </li>
+          <li class="footer__item">
+            <h5 class="footer__item--title">Do you like ? Share this !</h5>
+            <ul class="footer__item--links">
+              <li class="link">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </li>
+              <li class="link">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </li>
+              <li class="link">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </li>
+            </ul>
+            <p>© Untitled | Website created with Mashup Template/Unsplash</p>
+          </li>
+          <li class="footer__item">
+            <h5 class="footer__item--title">Subscribe to newsletter</h5>
+            <div class="footer__submit">
+              <input type="text" />
+              <a class="download-btn" href="#">OK</a>
+            </div>
+          </li>
+        </ul>
+        <button class="arrowup--btn">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
