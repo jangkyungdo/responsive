@@ -50,17 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     variable = true;
 
-    slideList.style.transitionProperty = "none"; //transtion 충돌로 인한 오류?를 잡기위한 코드, 바로 실행되야하는 부분이 transtion값이 적용이 되여서
-    slideList.style.left = "-100%";
+    slideList.style.transition = "none"; // transition 효과를 없애고 위치만 -100% 이동시킨다.
+    slideList.style.left = "-100%"; // 맨 앞에 복제한 자식이 있기때문에 위치를 고정할수있다.
 
+    // 마지막 자식을 복사해서 맨 앞에 넣고 첫번째 자식을 삭제
     let lastChild = slideList.lastElementChild;
     let cloneLastChild = lastChild.cloneNode(true);
-    slideList.prepend(cloneLastChild); //slideList에 복제한 첫번째 자식을 뒤에 다 넣음
-    lastChild.remove(); //기존 첫번째 자식은 없앰
 
+    slideList.prepend(cloneLastChild); //부모의 첫자식 노드 앞에 삽입한다.
+    lastChild.remove();
+
+    // 0.1초 뒤 transition효과로 자연스럽게 -100%에서 0%로 위치 이동
     setTimeout(() => {
       slideList.style.transition = "all 800ms";
-      slideList.style.left = "0%"; //left 0 으로 만들어줌으로 더이상 왼쪽으로 가지 못하게 막아줌
+      slideList.style.left = "0%";
       variable = false;
     }, 100);
   });
@@ -76,69 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
     slideList.style.left = "-100%";
 
     setTimeout(() => {
-      slideList.style.transitionProperty = "none"; //transtion 충돌로 인한 오류?를 잡기위한 코드, 바로 실행되야하는 부분이 transtion값이 적용이 되여서
-      let firstChild = slideList.firstElementChild;
-      let cloneFirstChild = firstChild.cloneNode(true);
-      slideList.append(cloneFirstChild); //sliderBox에 복제한 첫번째 자식을 뒤에 다 넣음
-      firstChild.remove(); //기존 첫번째 자식은 없앰
+      slideList.style.transition = "none"; // -100%에서 다시 0%로 움직일때 움직임을 자연스럽게 하기위해
       slideList.style.left = "0%"; //left 0 으로 만들어줌으로 더이상 왼쪽으로 가지 못하게 막아줌
+
+      let firstChild = slideList.firstElementChild; // firstElementChild는 차이 텍스트, 주석 요소를 무시한다. firstChild는 무시하지않는다.
+      let cloneFirstChild = firstChild.cloneNode(true); // 복제할 대상이 node, 그 노드의 메소드를 호출, true 해당 node의 children까지 복제, 해당 node만 복제하려면 false
+
+      slideList.append(cloneFirstChild); //복제한 첫번째 자식을 뒤에 다 넣음
+      firstChild.remove();
       variable = false;
     }, 800);
   });
-
-  // 슬라이드  코드
-  // if (slidebox) {
-  //   slideItem.forEach((item, index) => {
-  //     item.style.left = `${100 * index}%`;
-  //   });
-
-  //   next.addEventListener("click", () => {
-  //     if (variable) {
-  //       console.log("variable = true");
-  //       return;
-  //     }
-  //     variable = true;
-
-  //     if (current === slideItem.length - 3) {
-  //       goToSlide(3);
-  //       slideList.style.transition = `300ms`;
-  //       setTimeout(() => {
-  //         slideList.style.transition = `0s`;
-  //         goToSlide(0);
-  //       }, 300);
-  //     } else {
-  //       slideList.style.transition = `300ms`;
-  //       goToSlide(current + 1);
-  //     }
-  //     console.log("variable = false");
-  //     variable = false;
-  //   });
-
-  //   prev.addEventListener("click", () => {
-  //     if (variable) {
-  //       console.log("variable = true");
-  //       return;
-  //     }
-  //     variable = true;
-
-  //     if (current === 0) {
-  //       goToSlide(-1);
-  //       slideList.style.transition = `300ms`;
-  //       setTimeout(() => {
-  //         slideList.style.transition = `0s`;
-  //         goToSlide(2);
-  //       }, 300);
-  //     } else {
-  //       slideList.style.transition = `300ms`;
-  //       goToSlide(current - 1);
-  //     }
-  //     console.log("variable = false");
-  //     variable = false;
-  //   });
-  // }
-
-  function goToSlide(index) {
-    slideList.style.left = `${-100 * index}%`;
-    current = index;
-  }
 });
